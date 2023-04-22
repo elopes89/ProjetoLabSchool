@@ -30,7 +30,7 @@ O projeto pode ser executado com a ferramenta de documentação:
 ### Exemplo de como cadastrar uma categoria:
 ### Método POST
 
-![](/Prints/CapturadeTela(18).png)
+![](Prints/Captura de Tela (18).png)
 
 ### Exemplo de como exibir uma categoria:
 ### Método GET
