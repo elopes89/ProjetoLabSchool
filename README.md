@@ -27,60 +27,62 @@ O projeto pode ser executado com a ferramenta de documentação:
 
 ## Exemplos de execução na ferramenta Thunder Client
 
-### Exemplo de como cadastrar uma categoria:
+### Exemplo de como cadastrar um Aluno:
 ### Método POST
 
 ![](Prints/post.png)
 
-### Exemplo de como exibir uma categoria:
+### Exemplo de como cadastrar um Aluno:
+### Método POST
+### A categoria deve ser cadastrada como: Ativo, Inativo, Irregular
+
+![](Prints/editarMatriculaFail.png)
+
+### Exemplo de como cadastrar Alunos:
+### Método POST
+### O CPF deve ser único
+
+![](Prints/post409.png)
+
+### Exemplo de como exibir a entidade Alunos:
 ### Método GET
 
-![](/modulo3/src/main/resources/getCategoria.png)
+![](/Prints/get.png)
 
-### Exemplo de como editar uma categoria:
-### Método PUT
+### Exemplo de como encontrar um Aluno pelo código:
+### Método GET
 
-![](/modulo3/src/main/resources/putCategoria.png)
+![](/Prints/getCodigo.png)
 
-### Exemplo de como deletar uma categoria:
+### Exemplo de como deletar um Aluno:
 ### Método DELETE
 
-![](/modulo3/src/main/resources/deleteCategoria.png)
+![](/Prints/delete.png)
 
-### Atenção!!!
-Se um produto estiver cadastrado com uma categoria será exibido este erro:
-### Método DELETE
+### Exemplo de como editar a situação de Aluno:
+### Método PATCH
 
-![](/modulo3/src/main/resources/erroDeleteCategoria.png)
+![](Prints/eitarSituacao.png)
 
-
-
-### Exemplo de como cadastrar um produto:
-  Este é o formato Json para realizar o cadastro da entidade. Para manipular a entidade Produto é só seguir seguir os passos de Categoria.
-#### Obs.: É necessário ter no mínimo uma categoria registrada antes de cadastrar um  produto.
+### Exemplo de como cadastrar um atendimento pedagógico:
 ### Método POST
-### Url http://localhost:4000/produtos
 
-    {
-        "nome": "bolacha recheada",
-        "valorProduto":5.0,
-        "statusProduto": true,
-        "id_categoria":1
-    }
+![](Prints/atendimento.png)
 
-Resultado esperado:
 
-    {
-        "id": 1,
-        "nome": "bolacha recheada",
-        "valorProduto":5.0,
-        "statusProduto": true,
-        "id_categoria":1
-    }
+### Exemplo de como visualizar Professores:
+### Método GET
+
+![](Prints/getProf.png)
+
+### Exemplo de como visualizar Pedagogos:
+### Método GET
+
+![](Prints/getPed.png)
 
 
 ### Produzido por Emanuel Lopes
-## Aluno FuturoDev Senai
+## Aluno  Senai
 
 
 
