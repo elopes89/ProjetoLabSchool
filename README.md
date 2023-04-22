@@ -22,7 +22,7 @@ Com a aplicação é possível fazer um crud da entidade Alunos e a seleção da
   
 ## Projeto documentado com a ferramenta Swagger.
 O projeto pode ser executado com a ferramenta de documentação:   
- [Swagger](http://localhost:5119/swagger-ui.html#/)
+ [Swagger](http://localhost:5119/swagger/index.html)
 
 
 ## Exemplos de execução na ferramenta Thunder Client
