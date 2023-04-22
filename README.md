@@ -5,7 +5,7 @@ Projeto desenvolvido em C# com .Net
 ## Ferramentas necessárias para uso do projeto:
 
   - VSCode ou Visual Studio
-  - Postman, Insomia ou Thunder Client(Extensão do VSCode)
+  - Postman, Insomnia ou Thunder Client(Extensão do VSCode)
   - SQL Server
   - Google Chrome
 
@@ -30,7 +30,7 @@ O projeto pode ser executado com a ferramenta de documentação:
 ### Exemplo de como cadastrar uma categoria:
 ### Método POST
 
-![](/ProjetoLabSchool/Prints/Captura de Tela(18).png)
+![](/Prints/Captura de Tela(18).png)
 
 ### Exemplo de como exibir uma categoria:
 ### Método GET
