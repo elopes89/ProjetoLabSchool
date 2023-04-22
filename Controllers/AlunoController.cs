@@ -21,7 +21,7 @@ public class AlunoController : ControllerBase
         _mapper = mapper;
     }
 
-    [HttpGet("ListarTodos")]
+    [HttpGet("/ListarAlunos")]
     public IActionResult Listar()
     {
         var alunos = _alunoRepository.ObterAlunos();
@@ -29,7 +29,7 @@ public class AlunoController : ControllerBase
     }
 
     [HttpGet]
-    [Route("/BuscaPorCodigo{codigo}")]
+    [Route("/BuscaPorCodigo/{codigo}")]
     public IActionResult ObterAluno(int codigo)
     {
         var aluno = _alunoRepository.ObterPorId(codigo);
@@ -40,8 +40,8 @@ public class AlunoController : ControllerBase
         return Ok(aluno);
     }
 
-    [HttpPatch]
-    [Route("/ConsultaPorSituacaoMatricular")]
+    [HttpGet]
+    [Route("/ConsultaPorMatricula")]
     public IActionResult BuscarSituacao([FromQuery] string situacao)
     {
         var alunos = _alunoRepository.Filtrar(situacao);
@@ -49,10 +49,11 @@ public class AlunoController : ControllerBase
     }
 
     [HttpPost]
+    [Route("/CadastrarAluno")]
     public IActionResult Criar([FromBody] AlunoCreateDto createDto)
     {
         
-        var validaSituacao = createDto.Situacao.ToUpper().ValidarSituacao();
+        var validaSituacao = createDto.Situacao.ValidarSituacao();
         var verficaCpf = _alunoRepository.ExistCpf(createDto.CPF);
         if (verficaCpf ==  false)
         {
@@ -76,7 +77,7 @@ public class AlunoController : ControllerBase
         }
     }
 
-    [HttpDelete("/DeleteAluno/{codigo}")]
+    [HttpDelete("/DeletarAluno/{codigo}")]
     public IActionResult Delete(int codigo)
     {
         var aluno = _alunoRepository.ObterPorId(codigo);
@@ -90,10 +91,9 @@ public class AlunoController : ControllerBase
     }
 
     [HttpPatch]
-    [Route("/EdicaoSituacao/{codigo}")]
+    [Route("/EditarSituacao/{codigo}")]
     public IActionResult AtualizarSituacaoAluno(int codigo, [FromForm] AlunoSituacaoDto dto)
     {
-        // dto.SituacaoDto.ToUpper();
         var validaSituacao = dto.SituacaoDto.ToUpper().ValidarSituacao();
                 if (validaSituacao == false)
         {

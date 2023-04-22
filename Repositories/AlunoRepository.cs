@@ -20,7 +20,8 @@ public class AlunoRepository
 
     public List<Aluno> Filtrar(string? filtro)
     {
-        return _context.Alunos.Where(x => x.Situacao.ToUpper().Contains(filtro.ToUpper())).ToList();
+        return _context.Alunos.Where(x => x.Situacao.ToUpper().Equals(filtro.ToUpper())).ToList();
+
     }
 
     public Aluno? ObterPorId(int id)

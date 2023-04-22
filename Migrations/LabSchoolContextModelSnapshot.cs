@@ -31,12 +31,15 @@ namespace LabSchool.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo"));
 
                     b.Property<string>("CPF")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("DataDeNascimento")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
                     b.Property<float>("Nota")
@@ -46,6 +49,7 @@ namespace LabSchool.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Situacao")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefone")
@@ -54,8 +58,7 @@ namespace LabSchool.Migrations
                     b.HasKey("Codigo");
 
                     b.HasIndex("CPF")
-                        .IsUnique()
-                        .HasFilter("[CPF] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Aluno", (string)null);
 

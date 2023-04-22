@@ -12,6 +12,6 @@ public static class StringExtension
 
     public static bool ValidarSituacao(this string situacao)
     {
-        return _tipoSituacao.Any(p => p == situacao);
+        return _tipoSituacao.Any(p => p == situacao?.ToUpper());
     }
 }

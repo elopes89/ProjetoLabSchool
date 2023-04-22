@@ -8,7 +8,7 @@ namespace LabSchool.Controllers;
 
 
 [ApiController]
-[Route("AlunoController")]
+[Route("AtendimentoPedagogicoController")]
 public class AtendimentoPedagogicoController : ControllerBase
 {
 
@@ -22,7 +22,7 @@ public class AtendimentoPedagogicoController : ControllerBase
         _pedagogoRepository = pedagogoRepository;
     }
 
-    [HttpPatch]
+    [HttpPost]
     [Route("/AtendimentoPedagogico")]
     public IActionResult AtualizarSituacao([FromBody] AtendimentoPedagogico atendimento)
     {

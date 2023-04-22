@@ -19,13 +19,13 @@ namespace LabSchool.Migrations
                 {
                     Codigo = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Situacao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     QtdAtendimento = table.Column<int>(type: "int", nullable: false),
+                    Situacao = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Nota = table.Column<float>(type: "real", nullable: false),
-                    Nome = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Nome = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     Telefone = table.Column<string>(type: "varchar(20)", nullable: true),
                     DataDeNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CPF = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    CPF = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -107,8 +107,7 @@ namespace LabSchool.Migrations
                 name: "IX_Aluno_CPF",
                 table: "Aluno",
                 column: "CPF",
-                unique: true,
-                filter: "[CPF] IS NOT NULL");
+                unique: true);
         }
 
         /// <inheritdoc />

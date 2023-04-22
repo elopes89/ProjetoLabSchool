@@ -14,7 +14,7 @@ public class ProfessorController : ControllerBase {
         _professorRepository = professorRepository;
     }
 
-    [HttpGet("Obter Professores")]
+    [HttpGet("ListarProfessores")]
     public IActionResult Listar(){
         var professores = _professorRepository.ObterProfessores();
         return Ok(professores);
