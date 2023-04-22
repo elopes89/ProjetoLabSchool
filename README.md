@@ -1,46 +1,36 @@
-# Projeto1FloripaMaisTec
-# Projeto Módulo FullStack Floripa + Tec
+# Projeto Módulo 1 FullStack Floripa + Tec
 
-Projeto desenvolvido em java com Spring Boot.
+Projeto desenvolvido em C# com .Net
 
-## Front End do Projeto
-O projeto atual pode ser executado no Front End, uma maneira mais amigável de executar o mesmo.
-Segue o link da parte do Front:
-
-[Front End](https://github.com/elopes89/frontProjeto2Modulo3/tree/main)
 ## Ferramentas necessárias para uso do projeto:
 
-  - Intellij 
-  - Postman
-  - PgAdmin4 ou DBeaver
+  - VSCode ou Visual Studio
+  - Postman, Insomia ou Thunder Client(Extensão do VSCode)
+  - SQL Server
   - Google Chrome
 
 ## Funcionalidade da aplicação
-Com a aplicação é possível fazer um crud completo tanto de produtos quanto de suas categoarias. Ou seja, é possível: salvar, deletar, editar e listar ambas as entidades do projeto.
+Com a aplicação é possível fazer um crud da entidade Alunos e a seleção das outras categoarias.
 
 ## Como usar a aplicação
 
-- No Intellij abra o arquivo pom.xml como projeto 
+- No VSCode abra o terminal e digite: dotnet run 
 - Inicie a aplicação
 - Na ferramenta de banco de dados verifique se foram criadas as tabelas
 - No Postman ou no Swagger execute os endpoints
-- Retorne ao DBeaver e veja os resultados da manipulação obtida com os endpoints
+- Retorne ao SQL Server e veja os resultados da manipulação obtida com os endpoints
   
 ## Projeto documentado com a ferramenta Swagger.
 O projeto pode ser executado com a ferramenta de documentação:   
- [Swagger](http://localhost:4000/swagger-ui.html#/)
+ [Swagger](http://localhost:5119/swagger-ui.html#/)
 
 
-## Foto do modelo Relacional
-
-![](/modulo3/src/main/resources/modeloRelacional.png)
-
-## Exemplos de execução no Postman ou no Swagger
+## Exemplos de execução na ferramenta Thunder Client
 
 ### Exemplo de como cadastrar uma categoria:
 ### Método POST
 
-![](/modulo3/src/main/resources/postCategoria.png)
+![](/Prints/Captura de Tela(18).png)
 
 ### Exemplo de como exibir uma categoria:
 ### Método GET
