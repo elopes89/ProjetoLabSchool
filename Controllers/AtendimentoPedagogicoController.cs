@@ -14,11 +14,9 @@ public class AtendimentoPedagogicoController : ControllerBase
 
     private readonly AlunoRepository _alunoRepository;
     private readonly PedagogoRepository _pedagogoRepository;
-    private readonly IMapper _mapper;
 
-    public AtendimentoPedagogicoController(AlunoRepository alunoRepository, IMapper mapper, PedagogoRepository pedagogoRepository)
+    public AtendimentoPedagogicoController(AlunoRepository alunoRepository, PedagogoRepository pedagogoRepository)
     {        _alunoRepository = alunoRepository;
-        _mapper = mapper;
         _pedagogoRepository = pedagogoRepository;
     }
 
