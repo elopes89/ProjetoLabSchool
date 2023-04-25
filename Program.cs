@@ -21,9 +21,6 @@ builder.Services.AddScoped<PedagogoRepository>();
 //AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-// builder.Services.AddDbContext<LabSchoolContext>(options => options.UseSqlServer("Server=Desktop-BQDAPB5\\SQLEXPRESS;Database=EmanuelLabSchool;Trusted_Connection=True;TrustServerCertificate=True"));
-
-
 builder.Services.AddDbContext<LabSchoolContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("LabSchoolContext")));
 
 
